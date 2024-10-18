@@ -9,18 +9,30 @@ default = {
 }
 
 class Requester(object):
-    async def __init__(self, api_url:str, params:dict):
+    """
+    Класс для запроса данных с GitHub API.
+
+    Атрибуты:
+        api_url (str): URL для API GitHub.
+        params (dict): Параметры для запроса.
+        session (requests.Session): Сессия для запросов.
+    """
+    def __init__(
+        self, 
+        api_url:str="https://api.github.com/search/repositories",
+        params:dict=default
+    ):
         self.api_url = api_url
         self.params = params
         self.session = requests.Session()
+        self.request_result = self.run_pipe()
         
-        
-    async def run_pipe(self):
-        pass
+    def run_pipe(self):
+        return self.get_data()
     
-    async def get_data(self):
+    def get_data(self):
         try:
-            response = await self.session.get(self.api_url, params=self.params)
+            response = self.session.get(self.api_url, params=self.params)
             response.raise_for_status()
             return response.json()
         except Exception as ex:

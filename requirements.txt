@@ -1,0 +1,10 @@
+# Web related dependencies
+requests # Common HTTP library, likely used in web.requester
+
+# Database related dependencies (assuming repositories.repositories might use one of these)
+sqlalchemy # SQL toolkit and ORM
+pymongo  # MongoDB driver, in case you're using MongoDB
+
+# Other potential dependencies
+pandas  # Data manipulation library, often used in data processing
+numpy # Numerical computing library, often used with pandas

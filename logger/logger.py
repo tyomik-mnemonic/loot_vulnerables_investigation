@@ -1,6 +1,6 @@
 import logging
 
-logger = logging.getLogger
+logger = logging.getLogger()
 
 # Set up logging
-logger.setLevel(logging.warning)
+logger.setLevel("INFO")
