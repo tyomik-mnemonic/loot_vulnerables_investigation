@@ -8,3 +8,5 @@ pymongo  # MongoDB driver, in case you're using MongoDB
 # Other potential dependencies
 pandas  # Data manipulation library, often used in data processing
 numpy # Numerical computing library, often used with pandas
+
+pyyaml

@@ -2,96 +2,96 @@
 search_criteria:
   # Python репозитории с различными интервалами звезд для каждой темы
 
-  - name: "python_high_stars"
-    languages: ["Python"]
-    star_ranges: [">=75000"]
+  #- name: "python_high_stars"
+  - q: "language:python"
+    star_ranges: [75000]
     topics: []
     count: 100
 
-  - name: "python_mid_high_stars"
-    languages: ["Python"]
-    star_ranges: ["10000..75000"]
+  #- name: "python_mid_high_stars"
+  - q: "language:python"
+    star_ranges: [10000,75000]
     topics: []
     count: 100
 
-  - name: "python_mid_stars"
-    languages: ["Python"]
-    star_ranges: ["1000..10000"]
+  #- name: "python_mid_stars"
+  - q: "language:python"
+    star_ranges: [1000,10000]
     topics: []
     count: 100
 
-  - name: "python_low_mid_stars"
-    languages: ["Python"]
-    star_ranges: ["100..1000"]
+  #- name: "python_low_mid_stars"
+  - q: "language:python"
+    star_ranges: [100,1000]
     topics: []
     count: 100
 
-  - name: "python_low_stars"
-    languages: ["Python"]
-    star_ranges: ["<100"]
+  #- name: "python_low_stars"
+  - q: "language:python"
+    star_ranges: [100]
     topics: []
     count: 100
 
   # Если учитывать Python репозитории с темами
 
-  - name: "python_security_mid_stars"
-    languages: ["Python"]
-    star_ranges: ["1000..10000"]
+  #- name: "python_security_mid_stars"
+  - q: "language:python"
+    star_ranges: [1000,10000]
     topics: ["security"]
     count: 100
 
-  - name: "python_web_api"
-    languages: ["Python"]
-    star_ranges: ["1000..10000"]
+  #- name: "python_web_api"
+  - q: "language:python"
+    star_ranges: [1000,10000]
     topics: ["web", "api"]
     count: 100
 
-  - name: "python_ml_data_science"
-    languages: ["Python"]
-    star_ranges: ["1000..10000"]
+  #- name: "python_ml_data_science"
+  - q: "language:python"
+    star_ranges: [1000,10000]
     topics: ["machine-learning", "data-science"]
     count: 100
 
-  - name: "python_iot_mid_stars"
-    languages: ["Python"]
-    star_ranges: ["1000..10000"]
+  #- name: "python_iot_mid_stars"
+  - q: "language:python"
+    star_ranges: [1000,10000]
     topics: ["iot"]
     count: 100
 
-  - name: "python_blockchain_mid_stars"
-    languages: ["Python"]
-    star_ranges: ["1000..10000"]
+  #- name: "python_blockchain_mid_stars"
+  - q: "language:python"
+    star_ranges: [1000,10000]
     topics: ["blockchain"]
     count: 100
 
   # Без учета языка, только по темам
   
-  - name: "high_stars_security"
-    languages: []
-    star_ranges: [">=75000"]
+  #- name: "high_stars_security"
+  - q: ""
+    star_ranges: [5000]
     topics: ["security"]
     count: 100
 
-  - name: "high_stars_web_api"
-    languages: []
-    star_ranges: [">=75000"]
+  #- name: "high_stars_web_api"
+  - q: ""
+    star_ranges: [75000]
     topics: ["web", "api"]
     count: 100
 
-  - name: "mid_high_stars_ml_data_science"
-    languages: []
-    star_ranges: ["10000..75000"]
+  #- name: "mid_high_stars_ml_data_science"
+  - q: ""
+    star_ranges: [10000,75000]
     topics: ["machine-learning", "data-science"]
     count: 100
 
-  - name: "mid_stars_iot"
-    languages: []
-    star_ranges: ["1000..10000"]
+  #- name: "mid_stars_iot"
+  - q: ""
+    star_ranges: [1000,10000]
     topics: ["iot"]
     count: 100
 
-  - name: "mid_stars_blockchain"
-    languages: []
-    star_ranges: ["1000..10000"]
+  #- name: "mid_stars_blockchain"
+  - q: ""
+    star_ranges: [1000,10000]
     topics: ["blockchain"]
     count: 100

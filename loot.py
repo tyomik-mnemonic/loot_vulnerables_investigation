@@ -6,8 +6,12 @@ import random
 GITHUB_TOKEN = 'your_github_token_here'
 
 # Загрузка конфигурации
-with open('config.yaml', 'r') as file:
-    config = yaml.safe_load(file)
+
+config = open('configs.yaml', 'r')
+config = yaml.safe_load(config)
+
+creds = open('.configs.yaml', 'r')
+creds = yaml.safe_load(creds)
 
 # Заголовки для авторизации
 headers = {

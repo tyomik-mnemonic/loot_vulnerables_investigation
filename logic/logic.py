@@ -1,5 +1,5 @@
 from typing import Dict, Any, Never
-from web.requester import Requester
+from web.requester import Requester, creds, config
 
 class Logic:
     """
@@ -26,14 +26,14 @@ class Logic:
         cls:type,
         data_param:Dict[Any, Any]=None
     )->Never:
-        
-        requester = Requester()
+        #почему то сейчай каждый итиый параметр идет как парам для одного запроса
+        requester = Requester(params=config['search_criteria'])
         data_param = requester.request_result
         
         for repo in data_param["items"]:
             cls.reposes.append(
                 {
-                    "name": repo['name'],
+#                    "name": repo['name'],
                     "stars": repo['stargazers_count'],
                     "forks_stars": repo['forks_count']
                 }
