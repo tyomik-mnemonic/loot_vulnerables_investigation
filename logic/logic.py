@@ -30,12 +30,13 @@ class Logic:
         requester = Requester(params=config['search_criteria'])
         data_param = requester.request_result
         
-        for repo in data_param["items"]:
-            cls.reposes.append(
-                {
-#                    "name": repo['name'],
-                    "stars": repo['stargazers_count'],
-                    "forks_stars": repo['forks_count']
-                }
-            )
+        for repo in data_param:
+            for k,v["items"] in repo.items():
+                cls.reposes.append(
+                    {
+    #                    "name": repo['name'],
+                        "stars": repo['stargazers_count'],
+                        "forks_stars": repo['forks_count']
+                    }
+                )
         return None

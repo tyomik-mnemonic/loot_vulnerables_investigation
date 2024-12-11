@@ -1,97 +1,60 @@
-# config.yaml
 search_criteria:
-  # Python репозитории с различными интервалами звезд для каждой темы
+  - q: "language:python stars:100000..500000"
+    per_page: 100
+    # Python репозитории с 100000 до 500000 звезд
 
-  #- name: "python_high_stars"
-  - q: "language:python"
-    star_ranges: [75000]
-    topics: []
-    count: 100
+  - q: "language:python stars:10001..99999"  
+    per_page: 100
+    # Python репозитории с 10000 до 100000 звезд
 
-  #- name: "python_mid_high_stars"
-  - q: "language:python"
-    star_ranges: [10000,75000]
-    topics: []
-    count: 100
+  - q: "language:python stars:1001..10000"
+    per_page: 100 
+    # Python репозитории с 1000 до 10000 звезд
 
-  #- name: "python_mid_stars"
-  - q: "language:python"
-    star_ranges: [1000,10000]
-    topics: []
-    count: 100
+  - q: "language:python stars:101..1000"
+    per_page: 100
+    # Python репозитории со 100 до 1000 звезд
 
-  #- name: "python_low_mid_stars"
-  - q: "language:python"
-    star_ranges: [100,1000]
-    topics: []
-    count: 100
+  - q: "language:python stars:<100"
+    per_page: 100
+    # Python репозитории с < чем 100 звездами
 
-  #- name: "python_low_stars"
-  - q: "language:python"
-    star_ranges: [100]
-    topics: []
-    count: 100
+  - q: "language:python stars:1000..10000 topic:security"
+    per_page: 100
+    # Python репозитории по теме "security" с 1000 до 10000 звезд
 
-  # Если учитывать Python репозитории с темами
+  - q: "language:python stars:1000..10000 topic:web topic:api"
+    per_page: 100
+    # Python репозитории по темам "web" и "api" с 1000 до 10000 звезд
 
-  #- name: "python_security_mid_stars"
-  - q: "language:python"
-    star_ranges: [1000,10000]
-    topics: ["security"]
-    count: 100
+  - q: "language:python stars:1000..10000 topic:machine-learning topic:data-science"
+    per_page: 100
+    # Python репозитории по темам "machine-learning" и "data-science" с 1000 до 10000 звезд
 
-  #- name: "python_web_api"
-  - q: "language:python"
-    star_ranges: [1000,10000]
-    topics: ["web", "api"]
-    count: 100
+  - q: "language:python stars:1000..10000 topic:iot"
+    per_page: 100
+    # Python репозитории по теме "iot" с 1000 до 10000 звезд
 
-  #- name: "python_ml_data_science"
-  - q: "language:python"
-    star_ranges: [1000,10000]
-    topics: ["machine-learning", "data-science"]
-    count: 100
+  - q: "language:python stars:1000..10000 topic:blockchain"
+    per_page: 100
+    # Python репозитории по теме "blockchain" с 1000 до 10000 звезд
 
-  #- name: "python_iot_mid_stars"
-  - q: "language:python"
-    star_ranges: [1000,10000]
-    topics: ["iot"]
-    count: 100
+  - q: "stars:>5000 topic:security"
+    per_page: 100
+    # Репозитории по теме "security" с более чем 5000 звезд
 
-  #- name: "python_blockchain_mid_stars"
-  - q: "language:python"
-    star_ranges: [1000,10000]
-    topics: ["blockchain"]
-    count: 100
+  - q: "stars:>75000 topic:web topic:api"
+    per_page: 100
+    # Репозитории по темам "web" и "api" с более чем 75000 звезд
 
-  # Без учета языка, только по темам
-  
-  #- name: "high_stars_security"
-  - q: ""
-    star_ranges: [5000]
-    topics: ["security"]
-    count: 100
+  - q: "stars:10000..75000 topic:machine-learning topic:data-science" 
+    per_page: 100
+    # Репозитории по темам "machine-learning" и "data-science" с 10000 до 75000 звезд
 
-  #- name: "high_stars_web_api"
-  - q: ""
-    star_ranges: [75000]
-    topics: ["web", "api"]
-    count: 100
+  - q: "stars:1000..10000 topic:iot"
+    per_page: 100
+    # Репозитории по теме "iot" с 1000 до 10000 звезд
 
-  #- name: "mid_high_stars_ml_data_science"
-  - q: ""
-    star_ranges: [10000,75000]
-    topics: ["machine-learning", "data-science"]
-    count: 100
-
-  #- name: "mid_stars_iot"
-  - q: ""
-    star_ranges: [1000,10000]
-    topics: ["iot"]
-    count: 100
-
-  #- name: "mid_stars_blockchain"
-  - q: ""
-    star_ranges: [1000,10000]
-    topics: ["blockchain"]
-    count: 100
+  - q: "stars:1000..10000 topic:blockchain"
+    per_page: 100
+    # Репозитории по теме "blockchain" с 1000 до 10000 звезд

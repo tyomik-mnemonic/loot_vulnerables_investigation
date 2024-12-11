@@ -50,13 +50,19 @@ class Requester(object):
         
             #для каждого пайпа добавляю авторизацию
             if self.params != default:
-                for i in self.params:
-                    h = {}
-                    h['Authorization'] = creds['creds']['token']
-                    h['Accept'] = 'application/vnd.github.v3+json'
-                    r = self.session.get(self.api_url, params=i, headers=h)
-                    r.raise_for_status()
-                    response.append(r)
+                for param_set in self.params:
+                    headers = {
+                        'Authorization': creds['creds']['token'],
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                
+                    r = self.session.get(self.api_url, params=param_set, headers=headers)
+                    try:
+                        r.raise_for_status()
+                    except requests.exceptions.HTTPError as e:
+                        logger.warning(f"HTTP error occurred: {e}")
+                    else:
+                        response.append(r)
             else:
                 response = self.session.get(self.api_url, params=default)
                 response.raise_for_status()
